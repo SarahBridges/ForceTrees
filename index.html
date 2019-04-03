@@ -1,0 +1,95 @@
+<html>
+<body>
+
+<h3>3 Types of Data for Force Trees</h3>
+
+<h4>Class Schedules
+</h4>
+<p>A force tree could be used to represent a dataset of students who have certain 
+classes with other students in the dataset. For example if Jenny has Psychology with 
+Martin and Spanish with Lisa; and Martin has Psychology with Jenny, Biology with Kim, 
+and Latin with Susan; and Lisa has Spanish with Jenny and Chemistry with Kim; and Kim 
+has Biology with Martin and Psychology with Susan; and Susan has Latin with Martin and 
+Psychology with Kim. Below is an example dataset that could be used to construct a 
+force tree for this scenario.
+</p>
+<p>
+var dataset = { nodes: [
+                        { name: "Jenny" },
+                        { name: "Martin" },
+                        { name: "Lisa" },
+                        { name: "Susan" },
+                        { name: "Kim" },
+                       ], 
+                 edges: [
+                         { source: 0, target: 1 },
+                         { source: 0, target: 2 },
+                         { source: 1, target: 4 },
+                         { source: 2, target: 4 },
+                         { source: 3, target: 1 },
+                         { source: 3, target: 4 },
+                        ]
+              };
+</p>
+
+<h4>Employee Schedule
+</h4>
+<p>Another dataset that could be visualized with a force tree is a work schedule for a 
+set of employees. For example, Jenny works Mondays, Wednesdays, and Fridays; Martin 
+works Mondays, Tuesdays, and Wednesdays; Lisa works Wednesdays, Thursdays, and Fridays; 
+Susan works Tuesdays and Thursdays; Kim works Tuesdays, Wednesdays, and Thursdays. 
+Below is an example dataset that could be used to construct a force tree for this 
+scenario.
+</p>
+<p>
+var dataset = { nodes: [
+                        { name: "Jenny" },
+                        { name: "Martin" },
+                        { name: "Lisa" },
+                        { name: "Susan" },
+                        { name: "Kim" },
+                       ], 
+                 edges: [
+                         { source: 0, target: 1 },
+                         { source: 0, target: 2 },
+                         { source: 0, target: 4 },
+                         { source: 1, target: 2 },
+                         { source: 1, target: 3 },
+                         { source: 1, target: 4 },
+                         { source: 2, target: 3 },
+                         { source: 2, target: 4 },
+                         { source: 3, target: 4 },
+                        ]
+              };
+</p>
+
+<h4>Group Projects
+</h4>
+<p>A force tree could also represent a dataset of what movies people have seen. For
+example if Jenny has seen <i>Kung Fu Panda</i> and <i>Infinity War</i>; Martin has 
+seen <i>Grapes of Wrath</i> and <i>Pride and Prejudice</i>; Lisa has seen <i>Kung Fu 
+Panda</i> and <i>Pride and Prejudice</i>; Susan has seen <i>Infinity War</i> and 
+<i>Spider Man</i>; and Kim has seen <i>Spider Man</i> and <i>Grapes of Wrath</i>. 
+Below is an example dataset that could be used to construct a force tree for this 
+scenario.
+</p>
+<p>
+var dataset = { nodes: [
+                        { name: "Jenny" },
+                        { name: "Martin" },
+                        { name: "Lisa" },
+                        { name: "Susan" },
+                        { name: "Kim" },
+                       ], 
+                 edges: [
+                         { source: 0, target: 2 },
+                         { source: 0, target: 3 },
+                         { source: 1, target: 2 },
+                         { source: 1, target: 4 },
+                         { source: 3, target: 4 },
+                        ]
+              };
+</p>
+
+</body>
+</html>
